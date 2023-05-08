@@ -1,6 +1,6 @@
 # Next.js App Router
 
-This is a cheat sheet project for the Next.js 13 App Router
+This is a cheat sheet project for the Next.js 13 [App Router](https://nextjs.org/docs/app)
 
 ## Getting Started
 
@@ -10,4 +10,5 @@ This is a cheat sheet project for the Next.js 13 App Router
 
 ## Resources
 
-- [Next.js App Router Docs](https://nextjs.org/docs)
+- [Next.js App Router Docs](https://nextjs.org/docs/app)
+- [App Router API Reference](https://nextjs.org/docs/app/api-reference)
