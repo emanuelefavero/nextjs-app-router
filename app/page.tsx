@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Greet from '@/components/Greet'
 
 type Time = {
   datetime: string
@@ -44,7 +45,7 @@ export default async function Home() {
 
   return (
     <>
-      <h1>Hello</h1>
+      <Greet />
       <Link href='/about'>About</Link>
       <Link href='/blog/1'>Blog 1</Link>
 
