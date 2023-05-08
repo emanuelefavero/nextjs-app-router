@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body > * {
+  margin: 1rem;
+}
+
+a {
+  color: magenta;
+}
