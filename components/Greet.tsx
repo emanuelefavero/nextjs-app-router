@@ -12,3 +12,4 @@ export default function Greet() {
 
   return <h1>{greet}</h1>
 }
+ 
