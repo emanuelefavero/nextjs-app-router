@@ -47,9 +47,13 @@ export default async function Home() {
   return (
     <>
       <Greet />
+
+      <h2>USERS</h2>
+
       <Link href='/about'>About</Link>
       <Link href='/blog/1'>Blog 1</Link>
       <Link href='/blog/2'>Blog 2</Link>
+      <Link href='/client-server-fetch'>Client Server Fetch</Link>
 
       <p>{time.datetime}</p>
 
