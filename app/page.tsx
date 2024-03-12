@@ -54,6 +54,7 @@ export default async function Home() {
       <Link href='/blog/1'>Blog 1</Link>
       <Link href='/blog/2'>Blog 2</Link>
       <Link href='/client-server-fetch'>Client Server Fetch</Link>
+      <Link href='/posts'>Posts</Link>
 
       <p>{time.datetime}</p>
 
