@@ -66,6 +66,9 @@ export default async function Home() {
         <li>
           <Link href='/posts'>Posts</Link>
         </li>
+        <li>
+          <Link href='/this-will-not-be-found'>Not Found</Link>
+        </li>
       </ul>
 
       <p>{time.datetime}</p>
