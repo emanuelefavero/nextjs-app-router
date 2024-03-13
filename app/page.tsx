@@ -69,6 +69,9 @@ export default async function Home() {
         <li>
           <Link href='/this-will-not-be-found'>Not Found</Link>
         </li>
+        <li>
+          <Link href='/parallel-routes'>Parallel Routes</Link>
+        </li>
       </ul>
 
       <p>{time.datetime}</p>
