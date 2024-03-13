@@ -1,35 +1,9 @@
 import Link from 'next/link'
 import Greet from '@/components/Greet'
 
-type Time = {
-  datetime: string
-}
-
 type Repo = {
   id: number
   full_name: string
-}
-
-// TIP: You can use different fetch strategies in the same page!
-
-// getTime uses getServerSideProps
-async function getTime() {
-  const res = await fetch(
-    'http://worldtimeapi.org/api/timezone/Europe/Rome',
-
-    // TIP: If you pass this, fetch will use getServerSideProps
-    {
-      cache: 'no-store',
-    }
-
-    // TIP: Add this instead to use Incremental Static Regeneration (ISR)
-    // {
-    //   next: {
-    //     revalidate: 1, // re-generate page every 1 second
-    //   },
-    // }
-  )
-  return res.json()
 }
 
 // getRepo uses getStaticProps
@@ -41,7 +15,6 @@ async function getRepo() {
 }
 
 export default async function Home() {
-  const time: Time = await getTime()
   const repo: Repo = await getRepo()
 
   return (
@@ -75,9 +48,10 @@ export default async function Home() {
         <li>
           <Link href='/server-component'>Server Component</Link>
         </li>
+        <li>
+          <Link href='/world-time-api'>World Time API</Link>
+        </li>
       </ul>
-
-      <p>{time.datetime}</p>
 
       {/* BEWARE: This result is from the github vercel api, yu could get a blank result if you exceed limit (very likely) */}
       <p>{repo.full_name}</p>
