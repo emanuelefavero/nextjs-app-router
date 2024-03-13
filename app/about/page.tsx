@@ -9,5 +9,10 @@ async function getUser() {
 
 export default async function AboutPage() {
   const user: User = await getUser()
-  return <div>AboutPage, {user.username}</div>
+
+  return (
+    <>
+      <h1>This is {user.username}&apos;s About Page</h1>
+    </>
+  )
 }
