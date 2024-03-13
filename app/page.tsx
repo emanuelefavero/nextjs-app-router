@@ -48,21 +48,39 @@ export default async function Home() {
     <>
       <Greet />
 
-      <h2>USERS</h2>
+      <h2>Users</h2>
 
-      <Link href='/about'>About</Link>
-      <Link href='/blog/1'>Blog 1</Link>
-      <Link href='/blog/2'>Blog 2</Link>
-      <Link href='/client-server-fetch'>Client Server Fetch</Link>
-      <Link href='/posts'>Posts</Link>
+      <ul>
+        <li>
+          <Link href='/about'>About</Link>
+        </li>
+        <li>
+          <Link href='/blog/1'>Blog 1</Link>
+        </li>
+        <li>
+          <Link href='/blog/2'>Blog 2</Link>
+        </li>
+        <li>
+          <Link href='/client-server-fetch'>Client Server Fetch</Link>
+        </li>
+        <li>
+          <Link href='/posts'>Posts</Link>
+        </li>
+      </ul>
 
       <p>{time.datetime}</p>
 
       {/* BEWARE: This result is from the github vercel api, yu could get a blank result if you exceed limit (very likely) */}
       <p>{repo.full_name}</p>
 
-      <Link href='/repo/next.js'>Repo next.js</Link>
-      <Link href='/repo/vercel'>Repo vercel</Link>
+      <ul>
+        <li>
+          <Link href='/repo/next.js'>Repo next.js</Link>
+        </li>
+        <li>
+          <Link href='/repo/vercel'>Repo vercel</Link>
+        </li>
+      </ul>
     </>
   )
 }
