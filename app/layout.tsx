@@ -25,3 +25,6 @@ export default function RootLayout({
     </html>
   )
 }
+
+// TIP: Layout components can fetch data
+// TIP: You can't pass data between layout and its children, but if you fetch the same data in the layout and its children (on the same route), React will automatically memoize the requests without affecting performance

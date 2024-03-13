@@ -13,3 +13,5 @@ export default function Layout({ children, team, analytics }: Props) {
     </>
   )
 }
+
+// TIP: Only the root layout can contain the html and body tags
