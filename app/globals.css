@@ -2,14 +2,91 @@
 @tailwind components;
 @tailwind utilities;
 
-body > * {
-  margin: 1rem;
+:root {
+  --background: #fff;
+  --foreground: #000;
+  --primary: #d946ef;
+  --selection: rgba(216, 70, 239, 0.3);
 }
 
-a {
-  color: magenta;
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #000;
+    --foreground: #fff;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  padding: 1rem;
+}
+
+::selection {
+  background-color: var(--selection);
+}
+
+:focus-visible {
+  outline: 2px solid var(--primary);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
 }
 
 h1 {
-  @apply text-4xl font-bold;
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+a {
+  color: var(--primary);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+button {
+  background-color: var(--primary);
+  color: #fff;
+  padding: 0.4rem 1.5rem;
+  border-radius: 0.5rem;
+}
+
+input {
+  color: #000;
+  border: 1px solid var(--foreground);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
 }
