@@ -10,5 +10,5 @@ export default function Greet() {
     setGreet('Hello')
   }, [])
 
-  return <h1>{greet}</h1>
+  return <p>{greet} from Client Component</p>
 }

@@ -1,14 +1,13 @@
 import Link from 'next/link'
-import Greet from '@/components/Greet'
 
 export default async function Home() {
   return (
     <>
-      <Greet />
-
-      <h2>Users</h2>
-
+      <h1>Home</h1>
       <ul>
+        <li>
+          <Link href='/client-component'>Client Component</Link>
+        </li>
         <li>
           <Link href='/about'>About</Link>
         </li>
