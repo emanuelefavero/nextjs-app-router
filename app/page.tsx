@@ -72,6 +72,9 @@ export default async function Home() {
         <li>
           <Link href='/parallel-routes'>Parallel Routes</Link>
         </li>
+        <li>
+          <Link href='/server-component'>Server Component</Link>
+        </li>
       </ul>
 
       <p>{time.datetime}</p>
