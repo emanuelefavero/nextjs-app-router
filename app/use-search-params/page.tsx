@@ -1,13 +1,7 @@
-// NOTE: Do not convert the while page to a client component if it's not necessary, create a separate client component instead
-'use client'
-
 import Link from 'next/link'
-import { useSearchParams } from 'next/navigation'
+import ShowSearchParams from '@/components/ShowSearchParams'
 
 export default function Page() {
-  const searchParams = useSearchParams()
-  const name = searchParams.get('name')
-
   return (
     <>
       <h1>useSearchParams</h1>
@@ -18,7 +12,7 @@ export default function Page() {
         Append query string to this page
       </Link>
 
-      {name && <p>Name: {name}</p>}
+      <ShowSearchParams />
     </>
   )
 }
