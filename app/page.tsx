@@ -15,6 +15,9 @@ export default async function Home() {
           <Link href='/use-pathname'>usePathname</Link>
         </li>
         <li>
+          <Link href='/use-search-params'>useSearchParams</Link>
+        </li>
+        <li>
           <Link href='/client-component'>Client Component</Link>
         </li>
         <li>
