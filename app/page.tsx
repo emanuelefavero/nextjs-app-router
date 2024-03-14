@@ -6,6 +6,9 @@ export default async function Home() {
       <h1>Home</h1>
       <ul>
         <li>
+          <Link href='/search-parameters'>Search Parameters</Link>
+        </li>
+        <li>
           <Link href='/use-pathname'>usePathname</Link>
         </li>
         <li>
