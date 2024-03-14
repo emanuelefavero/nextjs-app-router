@@ -45,6 +45,9 @@ export default async function Home() {
           <Link href='/posts'>Posts</Link>
         </li>
         <li>
+          <Link href='/use-router'>useRouter</Link>
+        </li>
+        <li>
           <Link href='/this-will-not-be-found'>Not Found</Link>
         </li>
         <li>
