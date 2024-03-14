@@ -21,6 +21,9 @@ export default async function Home() {
           <Link href='/client-component'>Client Component</Link>
         </li>
         <li>
+          <Link href='/back-button'>Back Button</Link>
+        </li>
+        <li>
           <Link href='/template-file'>Template File</Link>
         </li>
         <li>
