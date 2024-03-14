@@ -78,7 +78,8 @@ a:hover {
 }
 
 button,
-button[type='submit'] {
+button[type='submit'],
+input[type='submit'] {
   background-color: var(--primary);
   color: #fff;
   padding: 0.4rem 1.5rem;
