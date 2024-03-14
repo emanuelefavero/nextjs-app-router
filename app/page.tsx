@@ -65,6 +65,11 @@ export default async function Home() {
         <li>
           <Link href='/repo/vercel'>Repo vercel</Link>
         </li>
+        <li>
+          <Link href='/scroll-to-an-element#myElement'>
+            Scroll to an element
+          </Link>
+        </li>
       </ul>
     </>
   )
