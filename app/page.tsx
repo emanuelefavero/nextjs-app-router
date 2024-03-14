@@ -24,6 +24,9 @@ export default async function Home() {
           <Link href='/back-button'>Back Button</Link>
         </li>
         <li>
+          <Link href='/nested-routes/nested-route'>Nested Routes</Link>
+        </li>
+        <li>
           <Link href='/template-file'>Template File</Link>
         </li>
         <li>
