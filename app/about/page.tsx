@@ -1,9 +1,12 @@
+import { server } from '@/config/server'
+
 type User = {
   username: string
 }
 
 async function getUser() {
-  const res = await fetch('http://localhost:3000/api/user')
+  // TIP: Relative urls don't work in server components
+  const res = await fetch(`${server}/api/user`)
   return res.json()
 }
 

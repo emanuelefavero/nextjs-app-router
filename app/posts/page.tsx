@@ -1,5 +1,7 @@
+import { server } from '@/config/server'
+
 async function getPosts() {
-  const res = await fetch('http://localhost:3000/api/posts')
+  const res = await fetch(`${server}/api/posts`)
   return res.json()
 }
 
