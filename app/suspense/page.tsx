@@ -13,3 +13,6 @@ export default function Page() {
     </>
   )
 }
+
+// TIP: Streaming allows you to break down the page's HTML into smaller chunks and progressively send those chunks from the server to the client
+// TIP: Suspense allows you to show a loading state while waiting for the server to send the next chunk of HTML
