@@ -76,6 +76,9 @@ export default async function Home() {
             Scroll to an element
           </Link>
         </li>
+        <li>
+          <Link href='/suspense'>Streaming with Suspense</Link>
+        </li>
       </ul>
     </>
   )
