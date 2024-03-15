@@ -48,7 +48,7 @@ export default async function Home() {
           <Link href='/use-router'>useRouter</Link>
         </li>
         <li>
-          <Link href='/redirect'>Redirect Home (nothing will happen)</Link>
+          <Link href='/redirect'>Redirect</Link>
         </li>
         <li>
           <Link href='/this-will-not-be-found'>Not Found</Link>

@@ -1,8 +1,18 @@
-import { redirect } from 'next/navigation'
+import { logUsername } from '@/app/actions'
+
+// TIP: Check logUsername function in app/actions.tsx to see how to use the redirect function
 
 export default function Page() {
-  redirect('/')
+  return (
+    <>
+      <p>
+        The user will be redirected home after submitting the form. Check the
+        server console to see the name logged
+      </p>
+      <form action={logUsername}>
+        <input type='text' name='username' placeholder='Username' />
+        <button type='submit'>Log Username</button>
+      </form>
+    </>
+  )
 }
-
-// TIP: The redirect function allows you to programmatically redirect to another route in Server Components.
-// NOTE: You can't use the redirect function inside jsx
