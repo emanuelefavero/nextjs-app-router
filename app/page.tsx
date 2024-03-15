@@ -79,6 +79,9 @@ export default async function Home() {
         <li>
           <Link href='/suspense'>Streaming with Suspense</Link>
         </li>
+        <li>
+          <Link href='/error-handling'>Error Handling</Link>
+        </li>
       </ul>
     </>
   )
