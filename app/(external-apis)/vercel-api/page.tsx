@@ -21,3 +21,6 @@ export default async function Page() {
     </>
   )
 }
+
+// TIP: This route is located inside a (external-api) folder. This is called "route grouping" and is just meant to organize your code. It doesn't affect the route itself.
+// BEWARE: Routes that include a route group should not resolve to the same URL path as other routes. For example, since route groups don't affect URL structure, (marketing)/about/page.js and (shop)/about/page.js would both resolve to /about and cause an error
