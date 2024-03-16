@@ -1,0 +1,5 @@
+TIPS:
+
+- A private folder does not create a route in Next.js
+- To create a private folder, just append an underscore to the folder name. For example, `app/_private-folder` will not create a route in Next.js
+- You can put any files here, even components, and they will not be accessible from the browser
