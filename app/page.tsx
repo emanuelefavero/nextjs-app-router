@@ -82,6 +82,9 @@ export default async function Home() {
         <li>
           <Link href='/error-handling'>Error Handling</Link>
         </li>
+        <li>
+          <Link href='/file-reading'>File Reading</Link>
+        </li>
       </ul>
     </>
   )
