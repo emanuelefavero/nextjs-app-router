@@ -45,6 +45,9 @@ export default async function Home() {
           <Link href='/posts'>Posts</Link>
         </li>
         <li>
+          <Link href='/static-blog'>Static Blog</Link>
+        </li>
+        <li>
           <Link href='/use-router'>useRouter</Link>
         </li>
         <li>
