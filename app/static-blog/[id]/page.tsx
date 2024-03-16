@@ -17,7 +17,7 @@ export default async function Page({ params }: { params: { id: string } }) {
     <>
       <h1>Blog {id}</h1>
       <h3>{post?.title}</h3>
-      <p>{post?.content}</p>
+      <p>{post?.content}</p>{' '}
     </>
   )
 }
