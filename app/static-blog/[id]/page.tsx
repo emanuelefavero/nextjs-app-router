@@ -3,7 +3,7 @@ import { posts } from '@/data/posts'
 // * generateStaticParams statically generates routes at build time instead of on-demand at request time
 export async function generateStaticParams() {
   return posts.map((post) => ({
-    id: post.id.toString(),
+    id: post.id,
   }))
 }
 
@@ -11,7 +11,7 @@ export async function generateStaticParams() {
 export default async function Page({ params }: { params: { id: string } }) {
   const { id } = params
 
-  const post = posts.find((post) => post.id.toString() === id) // fetch also works
+  const post = posts.find((post) => post.id === id) // fetch also works
 
   return (
     <>
