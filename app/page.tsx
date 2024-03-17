@@ -97,6 +97,9 @@ export default async function Home() {
         <li>
           <Link href='/request-body'>Request Body</Link>
         </li>
+        <li>
+          <Link href='/use-reducer'>useReducer</Link>
+        </li>
       </ul>
     </>
   )
