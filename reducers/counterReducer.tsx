@@ -3,21 +3,31 @@ interface CounterState {
 }
 
 interface CounterAction {
-  type: 'increment' | 'decrement'
+  type: 'increment' | 'decrement' | 'reset'
 }
 
 export default function counterReducer(
   state: CounterState,
   action: CounterAction
 ): CounterState {
-  if (action.type === 'increment') {
-    return {
-      count: state.count + 1,
-    }
-  } else if (action.type === 'decrement') {
-    return {
-      count: state.count === 0 ? 0 : state.count - 1,
-    }
+  switch (action.type) {
+    case 'increment':
+      return {
+        count: state.count + 1,
+      }
+
+    case 'decrement':
+      return {
+        count: state.count === 0 ? 0 : state.count - 1,
+      }
+
+    case 'reset':
+      return {
+        count: 0,
+      }
+
+    default:
+      throw new Error('Unknown action.')
   }
 
   throw Error('Unknown action.')

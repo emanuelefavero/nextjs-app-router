@@ -17,6 +17,7 @@ export default function Page() {
 
       <button onClick={() => dispatch({ type: 'increment' })}>+</button>
       <button onClick={() => dispatch({ type: 'decrement' })}>-</button>
+      <button onClick={() => dispatch({ type: 'reset' })}>C</button>
       <p>Count: {state.count}</p>
     </>
   )
