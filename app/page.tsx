@@ -88,6 +88,9 @@ export default async function Home() {
         <li>
           <Link href='/file-reading'>File Reading</Link>
         </li>
+        <li>
+          <Link href='/cookies'>Cookies</Link>
+        </li>
       </ul>
     </>
   )
