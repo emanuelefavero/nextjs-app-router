@@ -94,6 +94,9 @@ export default async function Home() {
         <li>
           <Link href='/query-parameters'>Query Parameters</Link>
         </li>
+        <li>
+          <Link href='/request-body'>Request Body</Link>
+        </li>
       </ul>
     </>
   )
