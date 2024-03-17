@@ -30,6 +30,9 @@ export default async function Home() {
           <Link href='/template-file'>Template File</Link>
         </li>
         <li>
+          <Link href='/url-state'>URL State</Link>
+        </li>
+        <li>
           <Link href='/about'>About</Link>
         </li>
         <li>
