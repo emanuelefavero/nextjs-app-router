@@ -91,6 +91,9 @@ export default async function Home() {
         <li>
           <Link href='/cookies'>Cookies</Link>
         </li>
+        <li>
+          <Link href='/query-parameters'>Query Parameters</Link>
+        </li>
       </ul>
     </>
   )
