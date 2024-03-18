@@ -15,6 +15,10 @@ export async function simulateSlowNetwork() {
   redirect('/')
 }
 
+export async function incrementLike() {
+  return 1
+}
+
 // TIP: The redirect function allows you to programmatically redirect to another route in Server Components.
 // TIP: redirect and permanentRedirect can also be called in client components
 // TIP: permanentRedirect function can be used to redirect and return a 308 (permanent redirect) status code

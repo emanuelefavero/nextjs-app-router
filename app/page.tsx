@@ -9,6 +9,9 @@ export default async function Home() {
           <Link href='/server-actions'>Server Actions</Link>
         </li>
         <li>
+          <Link href='/server-actions-events'>Server Actions in Events</Link>
+        </li>
+        <li>
           <Link href='/search-parameters'>Search Parameters</Link>
         </li>
         <li>
