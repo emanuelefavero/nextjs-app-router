@@ -106,6 +106,9 @@ export default async function Home() {
         <li>
           <Link href='/use-reducer'>useReducer</Link>
         </li>
+        <li>
+          <Link href='/use-form-status'>useFormStatus</Link>
+        </li>
       </ul>
     </>
   )
