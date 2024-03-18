@@ -48,6 +48,9 @@ export default async function Home() {
           <Link href='/posts'>Posts</Link>
         </li>
         <li>
+          <Link href='/no-cache'>No Cache</Link>
+        </li>
+        <li>
           <Link href='/static-blog'>Static Blog</Link>
         </li>
         <li>
