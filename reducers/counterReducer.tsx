@@ -29,6 +29,4 @@ export default function counterReducer(
     default:
       throw new Error('Unknown action.')
   }
-
-  throw Error('Unknown action.')
 }
