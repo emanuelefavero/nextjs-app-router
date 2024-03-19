@@ -115,6 +115,9 @@ export default async function Home() {
         <li>
           <Link href='/preload-data'>Preload Data</Link>
         </li>
+        <li>
+          <Link href='/script'>Script</Link>
+        </li>
       </ul>
     </>
   )
