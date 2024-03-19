@@ -1,4 +1,4 @@
-import getUsers from '@/data/users'
+import { getUsers } from '@/data/users'
 
 type User = {
   id: number

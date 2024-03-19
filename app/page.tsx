@@ -112,6 +112,9 @@ export default async function Home() {
         <li>
           <Link href='/use-form-status'>useFormStatus</Link>
         </li>
+        <li>
+          <Link href='/preload-data'>Preload Data</Link>
+        </li>
       </ul>
     </>
   )
