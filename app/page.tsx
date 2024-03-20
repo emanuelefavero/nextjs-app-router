@@ -36,6 +36,9 @@ export default async function Home() {
           <Link href='/url-state'>URL State</Link>
         </li>
         <li>
+          <Link href='/context'>Context</Link>
+        </li>
+        <li>
           <Link href='/about'>About</Link>
         </li>
         <li>
