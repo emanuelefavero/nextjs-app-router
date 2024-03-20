@@ -121,6 +121,9 @@ export default async function Home() {
         <li>
           <Link href='/script'>Script</Link>
         </li>
+        <li>
+          <Link href='/check-if-client'>Check if client component</Link>
+        </li>
       </ul>
     </>
   )
