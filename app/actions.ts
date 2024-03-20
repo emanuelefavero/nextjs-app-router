@@ -1,7 +1,29 @@
 'use server'
 
 import { redirect } from 'next/navigation'
+import { revalidatePath } from 'next/cache'
 
+// * Create a user
+export async function createUser(formData: FormData) {
+  // Log the user name to the server console
+  console.log(formData.get('name'))
+
+  // Log all form data to the server console
+  const rawFormData = Object.fromEntries(formData)
+  console.log(rawFormData)
+
+  // HERE: Do something with the form data in the server
+
+  // Refresh the page after creating the user
+  revalidatePath('/server-actions')
+
+  // or use redirect
+  // redirect('/server-actions')
+
+  // TIP: revalidatePath allows you to purge cached data on-demand for a specific path
+}
+
+// * Log a username
 export async function logUsername(formData: FormData) {
   console.log(formData.get('username'))
 
@@ -10,11 +32,13 @@ export async function logUsername(formData: FormData) {
   // permanentRedirect('/')
 }
 
+// * Simulate a slow network
 export async function simulateSlowNetwork() {
   await new Promise((resolve) => setTimeout(resolve, 1000))
   redirect('/')
 }
 
+// * Increment a like
 export async function incrementLike() {
   return 1
 }

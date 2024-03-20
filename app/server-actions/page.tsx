@@ -1,21 +1,28 @@
-import { redirect } from 'next/navigation'
+'use client'
+
+import { useRef } from 'react'
+import { createUser } from '@/app/actions'
+
+// import { redirect } from 'next/navigation'
 
 export default function Page() {
-  async function createUser(formData: FormData) {
-    'use server'
+  // async function createUser(formData: FormData) {
+  //   'use server'
 
-    // Log the user name to the server console
-    console.log(formData.get('name'))
+  //   // Log the user name to the server console
+  //   console.log(formData.get('name'))
 
-    // Log all form data to the server console
-    const rawFormData = Object.fromEntries(formData)
-    console.log(rawFormData)
+  //   // Log all form data to the server console
+  //   const rawFormData = Object.fromEntries(formData)
+  //   console.log(rawFormData)
 
-    // HERE: Do something with the form data in the server
+  //   // HERE: Do something with the form data in the server
 
-    // Redirect user to the home page after creating the user
-    redirect('/')
-  }
+  //   // Redirect user to the home page after creating the user
+  //   redirect('/server-actions')
+  // }
+
+  const ref = useRef<HTMLFormElement>(null)
 
   return (
     <div>
@@ -27,7 +34,20 @@ export default function Page() {
         name to the server console
       </p>
 
+      <p>Keep form data after submitting form</p>
       <form action={createUser}>
+        <input type='text' name='name' placeholder='Name' />
+        <button type='submit'>Create User</button>
+      </form>
+
+      <p className='mt-4'>Clear data after submitting form</p>
+      <form
+        ref={ref}
+        action={async (formData) => {
+          await createUser(formData)
+          ref.current?.reset()
+        }}
+      >
         <input type='text' name='name' placeholder='Name' />
         <button type='submit'>Create User</button>
       </form>
