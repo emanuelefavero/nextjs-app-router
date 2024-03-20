@@ -7,7 +7,7 @@ export default function Page() {
     <>
       <h1 id='script-page-title'>Script Page</h1>
 
-      <p>The title color is changed by the script</p>
+      <p>Check the console to see the log message from the Script</p>
 
       <Script
         src='/script.js' // script file in public directory
