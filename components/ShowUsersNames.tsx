@@ -1,6 +1,6 @@
 'use client'
 
-import getUsers from '@/data/users'
+import { getUsers } from '@/data/users'
 import { useState, useEffect } from 'react'
 
 type User = {
