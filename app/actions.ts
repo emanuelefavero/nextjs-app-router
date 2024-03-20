@@ -38,9 +38,9 @@ export async function simulateSlowNetwork() {
   redirect('/')
 }
 
-// * Increment a like
-export async function incrementLike() {
-  return 1
+// * Likes
+export async function incrementLike(likes: number) {
+  return likes + 1
 }
 
 // TIP: The redirect function allows you to programmatically redirect to another route in Server Components.

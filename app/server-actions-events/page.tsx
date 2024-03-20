@@ -4,7 +4,8 @@ import { useState } from 'react'
 import { incrementLike } from '@/app/actions'
 
 export default function Page() {
-  const [likes, setLikes] = useState(0)
+  const [likes, setLikes] = useState(99)
+  const [liked, setLiked] = useState(false)
 
   return (
     <>
@@ -16,12 +17,14 @@ export default function Page() {
       </p>
 
       <button
+        disabled={liked}
         onClick={async () => {
-          const updatedLikes = await incrementLike()
-          setLikes(updatedLikes)
+          const newLikes = await incrementLike(likes)
+          setLikes(newLikes)
+          setLiked(true)
         }}
       >
-        Increment Like
+        Increment Likes
       </button>
 
       <p className='mt-2'>Likes: {likes}</p>
