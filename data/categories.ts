@@ -70,6 +70,10 @@ const categories = [
     ],
   },
   {
+    title: 'Styling',
+    links: [{ href: '/styling', text: 'Styling' }],
+  },
+  {
     title: 'General Topics and Examples',
     links: [
       { href: '/about', text: 'About' },
