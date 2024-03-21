@@ -66,6 +66,7 @@ const categories = [
     links: [
       { href: '/request-memoization', text: 'Request Memoization' },
       { href: '/revalidate', text: 'Revalidate' },
+      { href: '/opt-out-of-caching', text: 'Opt out of caching' },
     ],
   },
   {
