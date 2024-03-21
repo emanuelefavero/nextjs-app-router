@@ -1,6 +1,7 @@
 import { posts } from '@/data/posts'
 
 // * generateStaticParams statically generates routes at build time instead of on-demand at request time
+// NOTE: This is not necessary for the blog to work, but it can be good for static content such as a blog
 export async function generateStaticParams() {
   return posts.map((post) => ({
     id: post.id,
