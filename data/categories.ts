@@ -63,7 +63,10 @@ const categories = [
   },
   {
     title: 'Caching',
-    links: [{ href: '/request-memoization', text: 'Request Memoization' }],
+    links: [
+      { href: '/request-memoization', text: 'Request Memoization' },
+      { href: '/revalidate', text: 'Revalidate' },
+    ],
   },
   {
     title: 'General Topics and Examples',
