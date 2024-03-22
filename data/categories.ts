@@ -74,6 +74,7 @@ const categories = [
     links: [
       { href: '/styling', text: 'Styling' },
       { href: '/fonts', text: 'Fonts' },
+      { href: '/images', text: 'Images' },
     ],
   },
   {
