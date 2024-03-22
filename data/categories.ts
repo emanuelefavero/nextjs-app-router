@@ -71,7 +71,10 @@ const categories = [
   },
   {
     title: 'Styling',
-    links: [{ href: '/styling', text: 'Styling' }],
+    links: [
+      { href: '/styling', text: 'Styling' },
+      { href: '/fonts', text: 'Fonts' },
+    ],
   },
   {
     title: 'General Topics and Examples',
