@@ -1,4 +1,6 @@
 import Inter from './Inter'
+import Noto_Sans from './Noto_Sans'
+import Open_Sans from './Open_Sans'
 import Roboto from './Roboto'
 
 export default function Page() {
@@ -8,6 +10,8 @@ export default function Page() {
 
       <Inter />
       <Roboto />
+      <Noto_Sans />
+      <Open_Sans />
     </>
   )
 }
