@@ -1,11 +1,13 @@
-import InterFont from './InterFont'
+import Inter from './Inter'
+import Roboto from './Roboto'
 
 export default function Page() {
   return (
     <>
       <h1>Fonts</h1>
 
-      <InterFont />
+      <Inter />
+      <Roboto />
     </>
   )
 }
