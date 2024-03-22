@@ -7,6 +7,9 @@ import {
   Lato,
   Poppins,
   Montserrat,
+  Raleway,
+  Fira_Code,
+  Noto_Serif,
 } from 'next/font/google'
 
 // --------------------------------------------------------
@@ -17,6 +20,9 @@ export const inter = Inter({ subsets: ['latin'] })
 export const noto_sans = Noto_Sans({ subsets: ['latin'] })
 export const open_sans = Open_Sans({ subsets: ['latin'] })
 export const montserrat = Montserrat({ subsets: ['latin'] })
+export const raleway = Raleway({ subsets: ['latin'] })
+export const fira_code = Fira_Code({ subsets: ['latin'] }) // Monospace
+export const noto_serif = Noto_Serif({ subsets: ['latin'] }) // Serif
 
 // Fixed Fonts
 // Fixed Fonts need to specify the weights

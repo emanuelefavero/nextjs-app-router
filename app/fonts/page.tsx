@@ -6,6 +6,9 @@ import {
   lato,
   poppins,
   montserrat,
+  raleway,
+  fira_code,
+  noto_serif,
 } from './fonts'
 
 export default function Page() {
@@ -20,6 +23,9 @@ export default function Page() {
       <h2 className={lato.className}>Hello from Lato Font</h2>
       <h2 className={poppins.className}>Hello from Poppins Font</h2>
       <h2 className={montserrat.className}>Hello from Montserrat Font</h2>
+      <h2 className={raleway.className}>Hello from Raleway Font</h2>
+      <h2 className={fira_code.className}>Hello from Fira Code Font</h2>
+      <h2 className={noto_serif.className}>Hello from Noto Serif Font</h2>
     </>
   )
 }
