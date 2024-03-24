@@ -58,3 +58,4 @@ export default function Page() {
 
 // TIP: For advanced needs, consider third-party players like react-player or video.js, which offer accessible controls and consistent browser experience
 // TIP: For iframe embeds, use React Suspense for fallbacks
+// TIP: Expect lots of errors in development when using the iframe tag and you you tube. To avoid these errors use react-player instead
