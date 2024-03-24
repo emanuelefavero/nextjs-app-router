@@ -6,6 +6,13 @@ export default function Page() {
     <>
       <h1>Videos</h1>
 
+      <h2>Video Tag</h2>
+      <p>
+        Use the video tag to embed self hosted, locally stored videos or videos
+        in the public folder. The video tag delivers more controls on the style
+        of the video player
+      </p>
+
       <video
         width='640'
         height='360'
@@ -26,8 +33,28 @@ export default function Page() {
         /> */}
         Your browser does not support the video tag.
       </video>
+
+      <h2 className='mt-4'>iFrame</h2>
+      <p>
+        Use the iFrame tag to embed videos from YouTube, Vimeo, or other video
+      </p>
+
+      <div
+        className='
+        w-full relative flex
+      '
+      >
+        <iframe
+          width='560'
+          height='315'
+          src='https://www.youtube.com/embed/PavYAOpVpJI?si=0491o4i-i4Bf7vkk'
+          allowFullScreen
+          title='YouTube video player'
+        />
+      </div>
     </>
   )
 }
 
 // TIP: For advanced needs, consider third-party players like react-player or video.js, which offer accessible controls and consistent browser experience
+// TIP: For iframe embeds, use React Suspense for fallbacks
