@@ -29,3 +29,25 @@ export default function Page() {
     </>
   )
 }
+
+// TIP: You can also use local fonts
+/*
+import localFont from 'next/font/local'
+
+// Font files can be colocated inside of `app`
+const myFont = localFont({
+  src: './my-font.woff2',
+  display: 'swap',
+})
+
+// You can then use the font in your components
+<h2 className={myFont.className}>Hello from My Font</h2>
+*/
+
+// TIP: If you want to use multiple files for a single font family, src can be an array:
+/*
+const myFont = localFont({
+  src: ['./my-font.woff2', './my-font.woff'],
+  display: 'swap',
+})
+*/
