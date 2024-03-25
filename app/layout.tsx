@@ -1,5 +1,4 @@
 import './globals.css'
-import Link from 'next/link'
 import HomeLink from '@/components/HomeLink'
 import { Inter } from 'next/font/google'
 
