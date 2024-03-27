@@ -1,33 +1,29 @@
-import { server } from '@/config/server'
+import { posts } from '@/data/posts'
 import { redirect } from 'next/navigation'
 
-// TIP: Fetch requests in Next.js are cached by default
-
-async function getPosts() {
-  // TIP: Opt-out of cache by using the `cache` option
-  // NOTE: Server components don't need to call the local api. (This will also cause an error when deploying to Vercel.). Instead, access the data directly by importing the file/exporting the data
-  const res = await fetch(`${server}/api/posts`, { cache: 'no-store' })
-  return res.json()
-}
-
-async function newPost(formData: FormData) {
+// * Server Action
+export async function newPost(formData: FormData) {
   'use server'
 
-  const res = await fetch(`${server}/api/posts`, {
-    method: 'POST',
-    body: JSON.stringify({
-      title: formData.get('title'),
-      content: formData.get('content'),
-    }),
-  })
+  const newPost = {
+    id: (posts.length + 1).toString(),
+    title: formData.get('title') as string,
+    content: formData.get('content') as string,
+  }
 
-  // TIP: Thanks to the `cache: 'no-store'` option, we will see the new post immediately after adding it
+  posts.push(newPost)
+
+  // TIP: Thanks to the disabled cache, we will see the new post immediately after adding it
   redirect('/no-cache')
 }
 
-export default async function Page() {
-  const posts = await getPosts()
+// * Disable cache for this page
+// export const fetchCache = 'force-no-store'
 
+// TIP: If you want to disable cache for each fetch request, pass {cache: 'no-store' } as the second argument to the fetch function
+// TIP: Sometimes we need to disable cache because fetch requests are cached by default. If we don't use fetch requests (like in this example), we don't need to disable cache
+
+export default function Page() {
   return (
     <>
       <h1>Revalidate Server Action</h1>
