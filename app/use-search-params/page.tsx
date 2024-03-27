@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import ShowSearchParams from '@/components/ShowSearchParams'
+import { Suspense } from 'react'
 
 export default function Page() {
   return (
@@ -12,7 +13,10 @@ export default function Page() {
         Append query string to this page
       </Link>
 
-      <ShowSearchParams />
+      {/* TIP: It is necessary to wrap any component that uses useSearchParams inside a suspense boundary @see https://nextjs.org/docs/messages/missing-suspense-with-csr-bailout */}
+      <Suspense>
+        <ShowSearchParams />
+      </Suspense>
     </>
   )
 }
