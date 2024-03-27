@@ -5,6 +5,7 @@ import { redirect } from 'next/navigation'
 
 async function getPosts() {
   // TIP: Opt-out of cache by using the `cache` option
+  // NOTE: Server components don't need to call the local api. (This will also cause an error when deploying to Vercel.). Instead, access the data directly by importing the file/exporting the data
   const res = await fetch(`${server}/api/posts`, { cache: 'no-store' })
   return res.json()
 }

@@ -1,6 +1,7 @@
 import { server } from '@/config/server'
 
 async function getPosts() {
+  // NOTE: Server components don't need to call the local api. (This will also cause an error when deploying to Vercel.). Instead, access the data directly by importing the file/exporting the data
   const res = await fetch(`${server}/api/posts`)
   return res.json()
 }
