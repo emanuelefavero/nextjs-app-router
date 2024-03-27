@@ -2,7 +2,7 @@ import { posts } from '@/data/posts'
 import { redirect } from 'next/navigation'
 
 // * Server Action
-export async function newPost(formData: FormData) {
+async function newPost(formData: FormData) {
   'use server'
 
   const newPost = {
