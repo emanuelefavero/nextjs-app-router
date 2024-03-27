@@ -20,6 +20,11 @@ const nextConfig = {
       },
     ]
   },
+
+  // Enable experimental OpenTelemetry instrumentation
+  experimental: {
+    instrumentationHook: true,
+  },
 }
 
 module.exports = withBundleAnalyzer(nextConfig)
