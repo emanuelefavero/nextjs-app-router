@@ -6,7 +6,11 @@ This is a cheat sheet project for the Next.js 13/14 [App Router](https://nextjs.
 
 ## Live Demo
 
-- [Next.js App Router](https://nextjs-app-router-cheatsheet.vercel.app/)
+- [nextjs-app-router-cheatsheet.vercel.app](https://nextjs-app-router-cheatsheet.vercel.app/)
+
+### Screenshot
+
+<img src="screenshot.png" alt="screenshot" width="300">
 
 ## Getting Started
 
