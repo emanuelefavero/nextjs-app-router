@@ -1,10 +1,11 @@
 'use client'
 
 import { useSearchParams, useRouter, usePathname } from 'next/navigation'
+import { Suspense } from 'react'
 
 const PRODUCTS = ['iPhone', 'iPad', 'MacBook', 'AirPods', 'Apple Watch']
 
-export default function Page() {
+function SearchProducts() {
   const router = useRouter()
   const pathname = usePathname()
   const searchParams = useSearchParams()
@@ -18,15 +19,6 @@ export default function Page() {
 
   return (
     <>
-      <h1>URL State</h1>
-
-      <p>
-        TIP: We can use the URL to manage state in Client Components instead of
-        useState! One of the advantages other than don&apos;t need to use
-        useState anymore is that the state is maintained even if the user
-        refreshes the page or goes back and forth in the browser history
-      </p>
-
       {/* SEARCH INPUT */}
       <input
         id='search'
@@ -51,6 +43,25 @@ export default function Page() {
       ) : (
         <p>No products found</p>
       )}
+    </>
+  )
+}
+
+export default function Page() {
+  return (
+    <>
+      <h1>URL State</h1>
+
+      <p>
+        TIP: We can use the URL to manage state in Client Components instead of
+        useState! One of the advantages other than don&apos;t need to use
+        useState anymore is that the state is maintained even if the user
+        refreshes the page or goes back and forth in the browser history
+      </p>
+
+      <Suspense>
+        <SearchProducts />
+      </Suspense>
     </>
   )
 }

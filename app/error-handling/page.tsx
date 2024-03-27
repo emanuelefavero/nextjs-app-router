@@ -1,5 +1,6 @@
 export default function Page() {
-  throw new Error('This is an error')
+  // * Uncomment the line below to see the error handling in action
+  // throw new Error('This is an error')
 
   return (
     <>
