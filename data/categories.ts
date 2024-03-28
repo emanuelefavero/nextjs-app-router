@@ -43,6 +43,7 @@ const categories = [
   {
     title: 'APIs and External Data',
     links: [
+      { href: '/third-party-libraries', text: 'Third Party Libraries' },
       { href: '/world-time-api', text: 'World Time API' },
       { href: '/vercel-api', text: 'Vercel API' },
       { href: '/repo/next.js', text: 'Repo next.js' },
