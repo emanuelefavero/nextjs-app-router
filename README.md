@@ -18,6 +18,8 @@ This is a cheat sheet project for the Next.js 13/14 [App Router](https://nextjs.
 2. Run `npm i`
 3. Run `npm run dev`
 
+> Note: In order for the `Google Maps Embed` to work (in the `/third-party-libraries` route), you need to add your own API key (`GOOGLE_MAPS_EMBED_API_KEY`) in the `.env.local` file. See instructions in the `.env.local.example` file.
+
 ## Resources
 
 - [Next.js App Router Docs](https://nextjs.org/docs/app)
