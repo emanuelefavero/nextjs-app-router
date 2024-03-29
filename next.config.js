@@ -4,6 +4,9 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
 })
 
+// * MDX is a file format that lets you write JSX in your Markdown documents
+const withMDX = require('@next/mdx')()
+
 // Run the following command to analyze your bundles:
 // ANALYZE=true npm run build
 // The report will create the .next build folder and open three new tabs in your browser, which you can inspect.
@@ -11,6 +14,9 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // Configure `pageExtensions` to include MDX files
+  pageExtensions: ['js', 'jsx', 'mdx', 'ts', 'tsx'],
+
   async redirects() {
     return [
       {
@@ -27,4 +33,4 @@ const nextConfig = {
   },
 }
 
-module.exports = withBundleAnalyzer(nextConfig)
+module.exports = withBundleAnalyzer(withMDX(nextConfig))

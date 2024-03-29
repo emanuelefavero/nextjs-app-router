@@ -1,0 +1,66 @@
+import MyComponent from './MyComponent'
+
+# Hello from Markdown (.mdx file)
+
+Remember to:
+
+- install the necessary packages
+
+```bash
+npm install @next/mdx @mdx-js/loader @mdx-js/react @types/mdx
+```
+
+- Create a mdx-components.tsx file at the root of your application:
+
+```tsx
+import type { MDXComponents } from 'mdx/types'
+
+export function useMDXComponents(components: MDXComponents): MDXComponents {
+  return {
+    ...components,
+  }
+}
+```
+
+- Update the next.config.js file:
+
+```js
+const withMDX = require('@next/mdx')()
+
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  // Configure `pageExtensions` to include MDX files
+  pageExtensions: ['js', 'jsx', 'mdx', 'ts', 'tsx'],
+  // Optionally, add any other Next.js config below
+}
+
+module.exports = withMDX(nextConfig)
+```
+
+&nbsp;
+
+---
+
+&nbsp;
+
+This is a paragraph
+
+This is **bold** text
+
+```jsx
+this is a code block
+```
+
+This is _italic_ text
+
+This is a list:
+
+- item 1
+- item 2
+- item 3
+
+### This is a heading
+
+<img src='https://source.unsplash.com/random/400x200' alt='random image' />{' '}
+
+<MyComponent />
