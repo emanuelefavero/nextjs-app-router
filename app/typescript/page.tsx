@@ -9,6 +9,11 @@ type arrayOfManyTypes = Array<number | string | boolean>
 
 const arrayOfManyTypes: arrayOfManyTypes = [1, 'a', 2, 'b', true]
 
+// * readonly
+const readOnlyArray: readonly number[] = [10, 20, 30]
+
+// readOnlyArray.push(40) // Error
+
 export default function Page() {
   return (
     <>
@@ -38,6 +43,14 @@ export default function Page() {
 
       {arrayOfManyTypes.map((value, index) => (
         <p key={index}>{value}</p>
+      ))}
+
+      <h2>Readonly</h2>
+
+      <p>Readonly arrays can&apos;t be modified.</p>
+
+      {readOnlyArray.map((number, index) => (
+        <p key={index}>{number}</p>
       ))}
     </>
   )
