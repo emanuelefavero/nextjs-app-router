@@ -90,6 +90,7 @@ const categories = [
       { href: '/blog/2', text: 'Blog 2' },
       { href: '/template-file', text: 'Template File' },
       { href: '/back-button', text: 'Back Button' },
+      { href: '/typescript', text: 'TypeScript' },
     ],
   },
 ]
