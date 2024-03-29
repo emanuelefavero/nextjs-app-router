@@ -54,6 +54,7 @@ const categories = [
     title: 'Advanced Features and Best Practices',
     links: [
       { href: '/mdx', text: 'MDX' },
+      { href: '/mdx-blog', text: 'MDX Blog' },
       { href: '/lazy-loading', text: 'Lazy Loading' },
       { href: '/suspense', text: 'Streaming with Suspense' },
       { href: '/error-handling', text: 'Error Handling' },
