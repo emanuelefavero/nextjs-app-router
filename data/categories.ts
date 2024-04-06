@@ -63,6 +63,7 @@ const categories = [
       { href: '/check-if-client', text: 'Check if Client Component' },
       { href: '/static-blog', text: 'Static Blog' },
       { href: '/posts', text: 'Posts' },
+      { href: '/headers', text: 'Headers' },
     ],
   },
   {
