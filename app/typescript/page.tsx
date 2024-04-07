@@ -12,6 +12,12 @@ const arrayOfManyTypes: arrayOfManyTypes = [1, 'a', 2, 'b', true]
 // * readonly
 const readOnlyArray: readonly number[] = [10, 20, 30]
 
+// * Tuple
+const arrayOfSpecificLengthAndTypes: [string, boolean] = ['string', true]
+
+// Named tuples provide more context for what our index values represent.
+const namedTuple: [name: string, age: number] = ['John', 35]
+
 // readOnlyArray.push(40) // Error
 
 export default function Page() {
@@ -51,6 +57,21 @@ export default function Page() {
 
       {readOnlyArray.map((number, index) => (
         <p key={index}>{number}</p>
+      ))}
+
+      <h2>Tuple</h2>
+
+      <p>
+        Tuples are fixed-length arrays that can have multiple types in them.
+      </p>
+
+      {arrayOfSpecificLengthAndTypes.map((value, index) => (
+        <p key={index}>{value.toString()}</p>
+      ))}
+
+      <h4>Named Tuple</h4>
+      {namedTuple.map((value, index) => (
+        <p key={index}>{value.toString()}</p>
       ))}
     </>
   )
