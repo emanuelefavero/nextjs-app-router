@@ -17,6 +17,8 @@ export default function Page() {
   const headersList = headers()
   const referer = headersList.get('referer')
 
+  const languageHeader = headers().get('accept-language')
+
   return (
     <>
       <h1>Headers</h1>
@@ -32,6 +34,27 @@ export default function Page() {
       <Suspense fallback={null}>
         <IP />
       </Suspense>
+
+      <h2>Get header values directly</h2>
+
+      <h3>Accept-Language header</h3>
+
+      <p>
+        The <span className='text-amber-500'>Accept-Language</span> header
+        specifies the preferred language of the user
+      </p>
+
+      {languageHeader && (
+        <>
+          <p className='text-emerald-500'>
+            Accept-Language header: {languageHeader}
+          </p>
+          <p>
+            TIP: The <span className='text-amber-500'>q</span> factor indicates
+            the relative degree of preference for that language.
+          </p>
+        </>
+      )}
     </>
   )
 }
