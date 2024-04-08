@@ -61,7 +61,7 @@ const categories = [
       { href: '/file-reading', text: 'File Reading' },
       { href: '/script', text: 'Script' },
       { href: '/check-if-client', text: 'Check if Client Component' },
-      { href: '/static-blog', text: 'Static Blog' },
+      { href: '/static-blog', text: 'Static Blog (generateStaticParams)' },
       { href: '/posts', text: 'Posts' },
       { href: '/headers', text: 'Headers' },
       { href: '/middleware', text: 'Middleware' },

@@ -4,7 +4,7 @@ import { posts } from '@/data/posts'
 export default function Page() {
   return (
     <>
-      <h1>Static Blog Page</h1>
+      <h1>Static Blog (generateStaticParams)</h1>
 
       <ul>
         {posts.map((post) => (
