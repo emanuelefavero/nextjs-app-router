@@ -19,6 +19,21 @@ const arrayOfSpecificLengthAndTypes: [string, boolean] = ['string', true]
 // Named tuples provide more context for what our index values represent.
 const namedTuple: [name: string, age: number] = ['John', 35]
 
+// * Enum
+enum Colors {
+  Red = '#f00',
+  Green = '#0f0',
+  Blue = '#00f',
+}
+
+// Numbered enum
+// TIP: You can also start the numbering from a different value
+enum Rank {
+  First = 1,
+  Second,
+  Third,
+}
+
 export default function Page() {
   return (
     <>
@@ -72,6 +87,22 @@ export default function Page() {
       {namedTuple.map((value, index) => (
         <p key={index}>{value.toString()}</p>
       ))}
+
+      <h2>Enum</h2>
+
+      <p>Enums allow you to create a set of named constants.</p>
+
+      <p style={{ color: Colors.Red }}>{Colors.Red}</p>
+      <p style={{ color: Colors.Green }}>{Colors.Green}</p>
+      <p style={{ color: Colors.Blue }}>{Colors.Blue}</p>
+
+      <p>
+        Enums can also be numbered, and the following values will be incremented
+      </p>
+
+      <p>{Rank.First}</p>
+      <p>{Rank.Second}</p>
+      <p>{Rank.Third}</p>
     </>
   )
 }
