@@ -11,14 +11,13 @@ const arrayOfManyTypes: arrayOfManyTypes = [1, 'a', 2, 'b', true]
 
 // * readonly
 const readOnlyArray: readonly number[] = [10, 20, 30]
+// readOnlyArray.push(40) // Error
 
 // * Tuple
 const arrayOfSpecificLengthAndTypes: [string, boolean] = ['string', true]
 
 // Named tuples provide more context for what our index values represent.
 const namedTuple: [name: string, age: number] = ['John', 35]
-
-// readOnlyArray.push(40) // Error
 
 export default function Page() {
   return (
