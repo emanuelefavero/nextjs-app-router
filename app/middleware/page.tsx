@@ -1,8 +1,9 @@
 import Link from 'next/link'
-import { cookies } from 'next/headers'
+import { cookies, headers } from 'next/headers'
 
 export default function Page() {
   const nameCookie = cookies().get('username')?.value
+  const customHeader = headers().get('x-my-custom-header')
 
   return (
     <>
@@ -29,6 +30,14 @@ export default function Page() {
       </p>
 
       <Link href='/middleware/redirect'>Redirect Home</Link>
+
+      <h3>Custom header set with middleware</h3>
+
+      {customHeader && (
+        <p className='text-emerald-500'>
+          Custom header set with the value: {customHeader}
+        </p>
+      )}
     </>
   )
 }
