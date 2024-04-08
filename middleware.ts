@@ -3,6 +3,19 @@ import type { NextRequest } from 'next/server'
 
 export function middleware(request: NextRequest) {
   // TIP: You can use if statements to apply different middleware based on conditions
+
+  // * Set Cookies
+  if (request.nextUrl.pathname === '/middleware') {
+    const response = NextResponse.next()
+    response.cookies.set('username', 'John')
+
+    const newCookie = response.cookies.get('username')
+    console.log('New cookie set:', newCookie)
+
+    return response
+  }
+
+  // * Redirect
   if (request.nextUrl.pathname === '/middleware/redirect') {
     return NextResponse.redirect(new URL('/', request.url))
   }
