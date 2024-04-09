@@ -1,5 +1,3 @@
-import BackButton from '@/components/BackButton'
-
 export default function Page() {
   return (
     <>
@@ -17,8 +15,6 @@ export default function Page() {
         </span>{' '}
         to see the test for this page
       </p>
-
-      <BackButton className='hover:bg-fuchsia-700'>Go Back</BackButton>
     </>
   )
 }
