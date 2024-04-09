@@ -97,7 +97,10 @@ const categories = [
   },
   {
     title: 'Testing',
-    links: [{ href: '/vitest-unit-testing', text: 'Vitest Unit Testing' }],
+    links: [
+      { href: '/vitest-unit-testing', text: 'Vitest Unit Testing' },
+      { href: '/playwright-e2e-testing', text: 'Playwright E2E Testing' },
+    ],
   },
 ]
 
