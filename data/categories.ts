@@ -95,6 +95,10 @@ const categories = [
       { href: '/typescript', text: 'TypeScript' },
     ],
   },
+  {
+    title: 'Testing',
+    links: [{ href: '/vitest-unit-testing', text: 'Vitest Unit Testing' }],
+  },
 ]
 
 export default categories
