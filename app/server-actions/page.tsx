@@ -3,25 +3,11 @@
 import { useRef } from 'react'
 import { createUser } from '@/app/actions'
 
-// import { redirect } from 'next/navigation'
+// GET data from JSON file on the server
+import user from '@/data/user.json'
+const username = user.username
 
 export default function Page() {
-  // async function createUser(formData: FormData) {
-  //   'use server'
-
-  //   // Log the user name to the server console
-  //   console.log(formData.get('name'))
-
-  //   // Log all form data to the server console
-  //   const rawFormData = Object.fromEntries(formData)
-  //   console.log(rawFormData)
-
-  //   // HERE: Do something with the form data in the server
-
-  //   // Redirect user to the home page after creating the user
-  //   redirect('/server-actions')
-  // }
-
   const ref = useRef<HTMLFormElement>(null)
 
   return (
@@ -30,8 +16,8 @@ export default function Page() {
 
       <h2>Create User</h2>
       <p className='mb-2'>
-        Instead of creating an actual user, this form will just log the user
-        name to the server console
+        This form will log the user name to the server console and also save it
+        to a JSON file
       </p>
 
       <p>Keep form data after submitting form</p>
@@ -51,6 +37,13 @@ export default function Page() {
         <input type='text' name='name' placeholder='Name' />
         <button type='submit'>Create User</button>
       </form>
+
+      {/* SHOW USERNAME */}
+      {username && (
+        <p className='mt-2 text-xl'>
+          User: <strong>{username}</strong>
+        </p>
+      )}
     </div>
   )
 }

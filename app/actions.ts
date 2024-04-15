@@ -2,6 +2,7 @@
 
 import { redirect } from 'next/navigation'
 import { revalidatePath } from 'next/cache'
+import fs from 'fs'
 
 // * Create a user
 export async function createUser(formData: FormData) {
@@ -13,6 +14,9 @@ export async function createUser(formData: FormData) {
   console.log(rawFormData)
 
   // HERE: Do something with the form data in the server
+  // For example, save username to a JSON file (you would probably use a database in a real app)
+  const username = formData.get('name')
+  fs.writeFileSync('./data/user.json', JSON.stringify({ username }))
 
   // Refresh the page after creating the user
   revalidatePath('/server-actions')
