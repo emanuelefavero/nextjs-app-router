@@ -26,6 +26,7 @@ const categories = [
         text: 'Scroll to an Element',
       },
       { href: '/parallel-routes', text: 'Parallel Routes' },
+      { href: '/catch-all-routes', text: 'Catch All Routes' },
     ],
   },
   {
