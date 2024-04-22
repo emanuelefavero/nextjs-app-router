@@ -34,6 +34,34 @@ enum Rank {
   Third,
 }
 
+// * Type aliases and interfaces
+// Type aliases are useful for adding a custom name to a type
+type MyType = string
+const myType: MyType = 'Hello Type Alias'
+
+// TIP: Type aliases can also be used for complex types and objects
+/*
+type MyObject = {
+  name: string
+  age: number
+}
+const myObject: MyObject = {
+  name: 'John',
+  age: 35,
+}
+*/
+
+// Interfaces are generally used when defining objects instead of types
+interface MyObject {
+  name: string
+  age: number
+}
+
+const myObject: MyObject = {
+  name: 'John',
+  age: 35,
+}
+
 export default function Page() {
   return (
     <>
@@ -103,6 +131,22 @@ export default function Page() {
       <p>{Rank.First}</p>
       <p>{Rank.Second}</p>
       <p>{Rank.Third}</p>
+
+      <h2>Type aliases and interfaces</h2>
+
+      <p>Type aliases are a way to define custom types in TypeScript.</p>
+
+      <p>{myType}</p>
+
+      <h3>Interfaces</h3>
+
+      <p>
+        Interfaces are generally used when defining objects instead of types.
+      </p>
+
+      <p>
+        {myObject.name} is {myObject.age} years old
+      </p>
     </>
   )
 }
