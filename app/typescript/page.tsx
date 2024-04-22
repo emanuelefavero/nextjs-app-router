@@ -62,6 +62,19 @@ const myObject: MyObject = {
   age: 35,
 }
 
+// TIP: Interfaces can only be used for objects
+// TIP: Interfaces can be extended
+
+interface MyExtendedObject extends MyObject {
+  email: string
+}
+
+const myExtendedObject: MyExtendedObject = {
+  name: 'John',
+  age: 35,
+  email: 'john@email.com',
+}
+
 export default function Page() {
   return (
     <>
@@ -146,6 +159,15 @@ export default function Page() {
 
       <p>
         {myObject.name} is {myObject.age} years old
+      </p>
+
+      <h3>Extended Interfaces</h3>
+
+      <p>Interfaces can be extended to add more properties.</p>
+
+      <p>
+        {myExtendedObject.name} is {myExtendedObject.age} years old and his
+        email is {myExtendedObject.email}
       </p>
     </>
   )
