@@ -65,7 +65,6 @@ const categories = [
       { href: '/static-blog', text: 'Static Blog (generateStaticParams)' },
       { href: '/posts', text: 'Posts' },
       { href: '/headers', text: 'Headers' },
-      { href: '/middleware', text: 'Middleware' },
     ],
   },
   {
