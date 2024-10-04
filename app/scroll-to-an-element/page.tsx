@@ -3,7 +3,7 @@ export default function Page() {
     <>
       <h1>Scroll to an element</h1>
 
-      <p>
+      <p className='max-w-prose'>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla aliquam
         asperiores quasi natus optio dolore ratione laborum beatae commodi
         excepturi ex fugit, distinctio inventore dolor animi exercitationem
