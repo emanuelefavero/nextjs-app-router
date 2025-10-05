@@ -1,6 +1,7 @@
 import './globals.css'
 import HomeLink from '@/components/HomeLink'
 import { Inter } from 'next/font/google'
+import StyledComponentsRegistry from '@/lib/registry'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -29,10 +30,12 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className={inter.className}>
-        <header>
-          <HomeLink />
-        </header>
-        {children}
+        <StyledComponentsRegistry>
+          <header>
+            <HomeLink />
+          </header>
+          {children}
+        </StyledComponentsRegistry>
       </body>
     </html>
   )

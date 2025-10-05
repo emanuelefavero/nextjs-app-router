@@ -31,6 +31,11 @@ const nextConfig = {
   experimental: {
     instrumentationHook: true,
   },
+
+  // Enable Styled Components
+  compiler: {
+    styledComponents: true,
+  },
 }
 
 module.exports = withBundleAnalyzer(withMDX(nextConfig))
