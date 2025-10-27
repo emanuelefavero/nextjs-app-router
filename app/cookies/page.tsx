@@ -1,4 +1,5 @@
 import { cookies } from 'next/headers'
+import Link from 'next/link'
 
 export default function Page() {
   async function setCookie(formData: FormData) {
@@ -13,6 +14,10 @@ export default function Page() {
   return (
     <>
       <h1>Cookie Page</h1>
+
+      <Link href='/cookies/route-handler-cookies'>
+        Go to Route Handler Cookies Page
+      </Link>
 
       {hasNameCookie ? <p>Welcome back, {nameCookie}</p> : <p>Set your name</p>}
 
